@@ -1,0 +1,356 @@
+/* Whole page background */
+html{
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Main Layout */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* =========================
+   Part 1: Sidebar
+========================= */
+.sidebar {
+    width: 260px;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 70px;
+    margin-left: 40px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 20px;
+    border: 2px solid #ff914d;
+    border-radius: 20px;
+}
+
+.sidebar li {
+    margin: 18px 0;
+}
+
+/* Sidebar links alignment */
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Icon styling */
+.sidebar a i {
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Hover effect */
+.sidebar a:hover {
+    color: #ff914d;
+}
+/* =========================
+   Part 2: Content
+========================= */
+.main-content {
+    flex: 1;
+    margin-top: 120px;
+    height: 100vh;
+    width: 100%;
+    overflow-y: auto;
+    display: block;
+}
+
+/* Heading */
+h1 {
+    font-size: 40px;
+    margin-top: 70px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    color: #ff914d;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 5px 0;
+    margin-left: 50px;
+}
+
+h3 {
+    font-size: 18px;
+    margin: 15px 0 20px;
+    color: #ff914d;
+    margin-left: 50px;
+}
+
+/* Paragraph */
+p {
+    max-width: 600px;
+    line-height: 1.6;
+    margin-left: 50px;
+}
+
+/* =========================
+   Part 3: Small Boxes
+========================= */
+/* Icon box */
+.sidebar-icons .icon-box {
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 40px;
+    border: 2px solid #ff914d;
+    margin-right: 10px;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+/* =========================
+   Part 4: Buttons
+========================= */
+.buttons {
+    margin-top: 90px;
+}
+
+.btn {
+    display: inline-block;
+    border: 2px solid #ff914d;
+    padding: 10px 20px;
+    margin-right: 20px;
+    margin-left: 50px;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* Hover */
+.btn:hover {
+    background-color: #ff914d;
+    color: black;
+}
+/* Wrapper for text + image */
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Left text */
+.text-content {
+    max-width: 55%;
+}
+
+/* Right image */
+.image-content img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ff914d;
+}
+
+/* Optional: spacing */
+.image-content {
+    margin-right: 40px;
+    margin-top: 130px;
+    padding: 20px;
+}
+.section {
+    display: block;         /* force vertical */
+    width: 100%;
+    min-height: 100vh;      /* full screen height */
+    padding: 60px 20px;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+/* Add border using pseudo-element */
+.section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    margin-left: -60px;
+    background-color: #8f8989;
+    background: linear-gradient(to right, transparent, #ff914d, transparent);
+}
+.resume-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+.resume-section h1{
+    margin-left: -30px;
+    margin-bottom: 20px;
+}
+.resume-image{
+    width:20%;
+    height:300px;
+    margin-left: -30px;
+    border: 5px solid #ff914d;
+}
+.resume-buttons{
+    margin-top: 50px;
+}
+.resume-btn{
+    display: inline-block;
+    border: 2px solid #ff914d;
+    padding: 10px 20px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.resume-btn:hover {
+    background-color: #ff914d;
+    color: black;
+}
+.skills-section {
+    text-align: center;
+}
+.skills-section h1{
+    margin-left: -30px;
+    margin-bottom: 20px;
+}
+.skills-section h2{
+    font-size: 18px;
+    margin-left: -30px;
+    line-height: 2.5;
+}
+.skills-section h3{
+    margin-left: -30px;
+}
+.skills-section ul {
+    list-style: none;
+    padding: 0;
+}
+.projects-section {
+    margin-top: 0%;
+    text-align: center;
+}
+.projects-section h1{
+    margin-left: -30px;
+}
+.projects-section p {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.projects-section h2 {
+    color: #ff914d;
+    margin-left: -30px;
+}
+
+.education-section {
+    text-align: center;
+}
+.education-section h1{
+    margin-left: -30px;
+}
+.education-section h2{
+    margin-top: 50px;
+    margin-left: -30px;
+}
+.education-section h3{
+    margin-left: -30px;
+}
+.education-section h4{
+    margin-left: -30px;
+}
+
+.certification-section {
+    font-size: 40px;
+    margin-top: 250px;
+    text-align: center;
+    line-height: 2.5;
+}
+.certification-section h1{
+    margin-left: -30px;
+}
+.certification-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.certification-section li {
+    margin: 20px 0;
+    font-size: 18px;
+    margin-left: -30px;
+}
+
+/* Link Styling */
+.certification-section a {
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.certification-section a:hover {
+    color: #ff914d;
+    border-bottom: 1px solid #ff914d;
+}
+.contact-footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: black;
+    /* border-top: 2px solid #8f8989; */
+}
+
+.contact-footer h2 {
+    color: #ff914d;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+/* Align phone left & email right */
+.contact-items {
+    display: flex;
+    justify-content: space-between;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* Links */
+.contact-items a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+/* Hover */
+.contact-items a:hover {
+    color: #ff914d;
+}
+
+/* Icons */
+.contact-items i {
+    margin-right: 8px;
+    color: #ff914d;
+}
